@@ -25,11 +25,22 @@ public class FillArray extends HttpServlet{
         }
         out.println("</tr>");
         out.println("</table>");
-//        out.println("<table border=1>");
-//        out.println("<tr>");
-//        out.println("</tr>");
-//        out.println("</table>");
     }
 }
+
+
+//        int size = 0;
+//        String value;
+//        size = Integer.parseInt(req.getParameter("size"));
+//        value = req.getParameter("value");
+//        res.setContentType("text/html");
+//        PrintWriter out = res.getWriter();
+//        out.println("<table border=1>");
+//        out.println("<tr>");
+        //for (int i =0; i < size; i++) {
+//        out.println("<td> + value + "</td>")
+//    }
+//        out.println("</tr>");
+//        out.println("</table>");
 
 
