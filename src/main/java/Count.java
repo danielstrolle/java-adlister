@@ -1,19 +1,20 @@
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet(name = "CountServlet", urlPatterns = "/count")
+public class Count extends HttpServlet {
+    int counter = 0;
+
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
-        String name;
-        name = req.getParameter("name");
-        res.setContentType("text/html");
+        counter += 1;
         PrintWriter out = res.getWriter();
-        if (name != null) {
-        out.println("<h1>Hello " + name + "</h1>");
-        } else {
-            out.println("<h1>Hello World</h1>");
+        if (req.getParameter("reset") != null) {
+            counter = 1;
         }
+        out.println("<h1>" + counter + "</h1>");
     }
 }
