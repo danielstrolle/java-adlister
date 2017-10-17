@@ -10,10 +10,10 @@ public class HelloWorldServlet extends HttpServlet {
         name = req.getParameter("name");
         res.setContentType("text/html");
         PrintWriter out = res.getWriter();
-        if (name != null) {
-        out.println("<h1>Hello " + name + "</h1>");
-        } else {
+        if (name == null || name.trim().isEmpty()) {
             out.println("<h1>Hello World</h1>");
+        } else {
+            out.println("<h1>Hello " + name + "</h1>");
         }
     }
 }

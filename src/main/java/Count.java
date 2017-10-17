@@ -7,6 +7,7 @@ import java.io.PrintWriter;
 
 @WebServlet(name = "CountServlet", urlPatterns = "/count")
 public class Count extends HttpServlet {
+
     int counter = 0;
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
@@ -15,6 +16,6 @@ public class Count extends HttpServlet {
         if (req.getParameter("reset") != null) {
             counter = 1;
         }
-        out.println("<h1>" + counter + "</h1>");
+        out.println("<h1>Page Views: " + counter + "</h1>");
     }
 }
