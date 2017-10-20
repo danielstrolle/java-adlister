@@ -9,7 +9,7 @@
     <jsp:include page="partials/navbar.jsp" />
 
     <div class="container">
-        <h1>Welcome to Your Profile ${sessionScope.user}!</h1>
+        <h1>Welcome to Your Profile ${user}!</h1>
         <p>Do cool stuff!</p>
         <p>Be cool stuff!</p>
     </div>

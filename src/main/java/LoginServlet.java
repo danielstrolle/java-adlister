@@ -14,6 +14,7 @@ public class LoginServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/login.jsp").forward(request, response);
         }else {
             response.sendRedirect("/profile");
+//            request.getRequestDispatcher("login.jsp").forward(request, response);   FASTER, DOESNT MAKE REQUEST TO SERVER. HOWEVER, IF PATH TO JSP CHANGES WILL NEED TO UPDATE MORE, HARDER TO MAINTAIN
         }
     }
 
